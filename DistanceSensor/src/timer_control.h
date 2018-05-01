@@ -11,5 +11,5 @@ uint16_t filter_digital();
 extern volatile bool ready_distance_digital;
 extern volatile uint16_t pulse_width;
 
-#define THRESHOLD_FILTER_DIFF 40
-#define NO_ATTEMPTS 3
+#define THRESHOLD_FILTER_DIFF 10
+#define NO_ATTEMPTS 4

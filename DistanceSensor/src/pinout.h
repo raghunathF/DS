@@ -18,6 +18,6 @@
 #define TRIGGER_PIN PIN_PA08
 
 //DAC
-#define DISTANCE PIN_PA04 
+#define DISTANCE PIN_PA02 
 
 #endif /* PINOUT_H_ */

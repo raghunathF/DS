@@ -8,6 +8,8 @@ src\ASF\sam0\drivers\dac\dac_sam_d_c_h\dac_callback.c
 
 src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c
 
+src\dacc_control.c
+
 src\test.c
 
 src\ASF\sam0\drivers\extint\extint_callback.c

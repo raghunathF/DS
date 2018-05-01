@@ -1,4 +1,4 @@
-src/main.d src/main.o: ../src/main.c ../src/asf.h \
+src/dacc_control.d src/dacc_control.o: ../src/dacc_control.c ../src/asf.h \
  ../src/ASF/sam0/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.2.1\include\stddef.h \
  ../src/ASF/common/utils/parts.h ../src/ASF/sam0/utils/status_codes.h \
@@ -118,8 +118,8 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h/reset.h \
  ../src/ASF/sam0/drivers/tc/tc.h \
  ../src/ASF/sam0/drivers/tc/tc_interrupt.h \
- ../src/ASF/sam0/drivers/tc/tc.h ../src/pinout.h ../src/test.h \
- ../src/timer.h ../src/dacc.h
+ ../src/ASF/sam0/drivers/tc/tc.h ../src/pinout.h ../src/dacc_control.h \
+ ../src/dacc.h ../src/timer_control.h
 
 ../src/asf.h:
 
@@ -371,8 +371,8 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/pinout.h:
 
-../src/test.h:
-
-../src/timer.h:
+../src/dacc_control.h:
 
 ../src/dacc.h:
+
+../src/timer_control.h:

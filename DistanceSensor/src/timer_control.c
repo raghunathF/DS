@@ -23,19 +23,21 @@ uint16_t filter_digital()
 	 //Previous value greater than certain 100
 	 uint16_t digital_filter_value = 0;
 	 static uint16_t present_raw_value = 0;
+	 static uint16_t infinite_value = 0;
 	 static uint16_t previous_raw_value = 0;
 	 static bool init_filter = true;
 	 static uint8_t attempts = 0;
 	 
 	 present_raw_value = read_ds_digital();
+	 infinite_value   = ((infinite_value*4)+ present_raw_value)/5;
 	 
 	 if(init_filter == true)
 	 {
 		 init_filter = false;
-		 previous_raw_value = present_raw_value;
+		 infinite_value = present_raw_value;
 	 }
 	 
-	 if(abs(previous_raw_value - present_raw_value) > THRESHOLD_FILTER_DIFF )
+	 if(abs(previous_raw_value - infinite_value) > THRESHOLD_FILTER_DIFF )
 	 {
 			 if(attempts  < NO_ATTEMPTS)
 			 {
@@ -45,15 +47,15 @@ uint16_t filter_digital()
 			 else
 			 {
 				 attempts = 0;
-				 digital_filter_value = present_raw_value;
-				 previous_raw_value   = present_raw_value ;
+				 digital_filter_value = infinite_value;
+				 previous_raw_value   = infinite_value;
 				 
 			 }
 	 }
 	 else
 	 {
-		 previous_raw_value	  = present_raw_value;
-		 digital_filter_value = present_raw_value;
+		 previous_raw_value	  = infinite_value;
+		 digital_filter_value = infinite_value;
 	 }
 	 
 	return digital_filter_value;

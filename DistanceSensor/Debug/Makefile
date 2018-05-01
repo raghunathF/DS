@@ -96,6 +96,7 @@ C_SRCS +=  \
 ../src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac.c \
 ../src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac_callback.c \
 ../src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.c \
+../src/dacc_control.c \
 ../src/test.c \
 ../src/ASF/sam0/drivers/extint/extint_callback.c \
 ../src/ASF/sam0/drivers/tc/tc_sam_d_r_h/tc.c \
@@ -128,6 +129,7 @@ OBJS +=  \
 src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac.o \
 src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac_callback.o \
 src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.o \
+src/dacc_control.o \
 src/test.o \
 src/ASF/sam0/drivers/extint/extint_callback.o \
 src/ASF/sam0/drivers/tc/tc_sam_d_r_h/tc.o \
@@ -153,6 +155,7 @@ OBJS_AS_ARGS +=  \
 src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac.o \
 src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac_callback.o \
 src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.o \
+src/dacc_control.o \
 src/test.o \
 src/ASF/sam0/drivers/extint/extint_callback.o \
 src/ASF/sam0/drivers/tc/tc_sam_d_r_h/tc.o \
@@ -178,6 +181,7 @@ C_DEPS +=  \
 src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac.d \
 src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac_callback.d \
 src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.d \
+src/dacc_control.d \
 src/test.d \
 src/ASF/sam0/drivers/extint/extint_callback.d \
 src/ASF/sam0/drivers/tc/tc_sam_d_r_h/tc.d \
@@ -203,6 +207,7 @@ C_DEPS_AS_ARGS +=  \
 src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac.d \
 src/ASF/sam0/drivers/dac/dac_sam_d_c_h/dac_callback.d \
 src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.d \
+src/dacc_control.d \
 src/test.d \
 src/ASF/sam0/drivers/extint/extint_callback.d \
 src/ASF/sam0/drivers/tc/tc_sam_d_r_h/tc.d \
@@ -239,6 +244,8 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

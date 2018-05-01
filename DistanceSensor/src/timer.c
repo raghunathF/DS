@@ -53,7 +53,7 @@ void config_tc1_ds(void)
 	
 	config_tc_ds.counter_size = TC_COUNTER_SIZE_16BIT; //16
 	config_tc_ds.clock_source = GCLK_GENERATOR_0;
-	config_tc_ds.clock_prescaler = TC_CLOCK_PRESCALER_DIV8; //64 msec
+	config_tc_ds.clock_prescaler = TC_CLOCK_PRESCALER_DIV16; //64 msec
 	
 	//Overflow occurs in 68msec
 	//config_tc_ds.counter_16_bit.value = 18661; // Overflows in 62.5ms
@@ -104,7 +104,6 @@ void config_extint_ds()
 }
 
 
-
 void enable_extint_ds()
 {
 	extint_chan_enable_callback(ECHO_EIC_LINE,EXTINT_CALLBACK_TYPE_DETECT);
@@ -122,7 +121,6 @@ void config_pins_timer_ds()
 	tc1_callbacks_ds();
 	
 }
-
 
 
 void config_ds()

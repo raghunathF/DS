@@ -73,6 +73,7 @@ void port_pin_set_config(
 	pinmux_config.powersave    = config->powersave;
 
 	system_pinmux_pin_set_config(gpio_pin, &pinmux_config);
+	
 }
 
 /**

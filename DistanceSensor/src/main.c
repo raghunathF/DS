@@ -30,6 +30,7 @@
 #include <asf.h>
 #include "test.h"
 #include "timer.h"
+#include "dacc.h"
 volatile uint16_t rising_edge=0;
 volatile uint16_t pulse_width=0;
 
@@ -40,10 +41,12 @@ int main (void)
 	system_init();
 	delay_init();
 	config_ds();
+	init_dac();
+	
 	while(1)
 	{
-		test();
-		
+		//test();
+		convert_digital();
 	}
 	/* Insert application code here, after the board has been initialized. */
 }
